@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Ratings and Reviews </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="form.css" />
+    </head>
+
+    <body id='pageId'>
+    
+    <form action="/submit" method="POST">
+
+        <label for="">
+            <h1 style="color: black">Ratings & Reviews</h1>
+        </label>
+        
+        <br><br>
+        Username: <input type="text" name="username">
+                      
+        <br><br>  
+        What movie did you see? <input type="text" name="movie_title" placeholder="Movie Title"> 
+        Rating:
+        
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        
+         
+        <br><br>
+        How would you rate your drink selection? <input type="text">
+        
+        <br><br>
+        Did you like the movie and drink combo? 
+        <input type="radio" value="Yes">Yes
+        <input type="radio" value="No">No
+        
+        <br><br>
+        Comments: <input type="text" name="comments" min="0" max="500" placeholder="Type here">
+            
+        <br><br>
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <div class="contact">
+        <p></p>
+    </div>
+                
+    </body>
+    <script src="form.js"></script>
+    
+</html>
