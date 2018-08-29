@@ -33,7 +33,7 @@ app.post('/searchResult', (req, res)=>{
     function render(data){
         // ^ data is the response from the server
         // populate this with parsed data var renderData = { }
-        var renderData = { test: res.data.results[0].title}
+        var renderData = { test: 'test'}
         res.render('pages/movieinfo', renderData)
     }
     
@@ -55,40 +55,38 @@ app.post('/searchResult', (req, res)=>{
 })
 
 
-app.get('/test', (req, res)=>{
-    searchResult = req.body.searchResult
-     var movieInfo = []
-     var result1 = res.results;
-    //  let movie = req.body.searchResult;
-    let movie = "The Devil Wears Prada";
-    let  newMovie = movie.replace(/\s+/g, '+');
+// app.get('/test', (req, res)=>{
+//     searchResult = req.body.searchResult
+//      var movieInfo = []
+//      var result1 = res.results;
+//     //  let movie = req.body.searchResult;
+//     let movie = "The Devil Wears Prada";
+//     let  newMovie = movie.replace(/\s+/g, '+');
 
-    
-
-    //  newMovie = movie.replace(' ','+');
-     let url = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query=' + newMovie
-     console.log(url);
-     axios.get(url)
-     .then(function(res){
-            //console.log(res)
+//     //  newMovie = movie.replace(' ','+');
+//      let url = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query=' + newMovie
+//      console.log(url);
+//      axios.get(url)
+//      .then(function(res){
+//             //console.log(res)
         
         
-        // var name = res.results[0].title;
-        console.log('i am here');
-       //  console.log(movieInfo)
-       //  console.log(res.data.url);
-       //  console.log(res.data.explanation);
-       console.log(res.data.results[0].title)
+//         // var name = res.results[0].title;
+//         console.log('i am here');
+//        //  console.log(movieInfo)
+//        //  console.log(res.data.url);
+//        //  console.log(res.data.explanation);
+//        console.log(res.data.results[0].title)
     
-    var name = res.results;
-     })
-     .catch(function(err){
-         console.log(err);
-     })
+//     var name = res.results;
+//      })
+//      .catch(function(err){
+//          console.log(err);
+//      })
     
-     res.send('hello');
+//      res.send('hello');
   
- })
+//  })
     
 
 http.listen(7000, function () {
