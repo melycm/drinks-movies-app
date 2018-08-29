@@ -6,7 +6,7 @@ $(function(){
         var movie = $('#searchbar').val();
 
         $.get(link1 + movie);
-        .done(function(movname){
+            get.done(function(movname){
             console.log(movname);
         })
     })

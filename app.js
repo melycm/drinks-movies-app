@@ -16,7 +16,6 @@ app.get("/", (req, res, next) => {
     res.render('pages/index');
 });
 
-
 http.listen(7000, function () {
     console.log('Listening on port 7000');
 });
