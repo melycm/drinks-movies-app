@@ -3,7 +3,7 @@
     "username": "dmgroup",
     "password": "dmgroup1",
     "database": "drinks_movies_app",
-    "host": "drinks-movies-apps.c9iefwrw6p5v.us-east-2.rds.amazonaws.com",
+    "host": "drinks-movies-app.c9iefwrw6p5v.us-east-2.rds.amazonaws.com",
     "dialect": "postgres"
   },
   "test": {
