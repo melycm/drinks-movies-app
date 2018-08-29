@@ -12,7 +12,8 @@ app.use(bodyParser.json())
 app.locals.siteTitle = "Movies and Drinks";
 
 app.get("/", (req, res, next) => {
-    res.render('pages/index');
+    res.render('pages/index', {
+    });
 });
 
 http.listen(7000, function () {
