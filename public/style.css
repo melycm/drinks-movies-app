@@ -150,6 +150,24 @@ a{
     margin-right: 33px;
 }
 
+#browse{
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 33px;
+}
+
+#browse:hover{
+    color: #020278;
+}
+
+a:hover{
+    color: #020278;
+    text-decoration: none;
+}
+
 .githublogos{
     margin: 10px 8px 5px 8px;
 }
