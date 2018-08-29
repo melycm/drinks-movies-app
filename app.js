@@ -17,11 +17,14 @@ app.get("/", (req, res, next) => {
     });
 });
 
+<<<<<<< HEAD
 app.get("/movieinfo", (req, res, next) => {
     res.render("pages/movieinfo", {
     });
 });
 
+=======
+>>>>>>> ca374453aa7ae46bc4918419a5455d5e93732c68
 http.listen(7000, function () {
     console.log('Listening on port 7000');
 });
