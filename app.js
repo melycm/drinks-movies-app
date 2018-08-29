@@ -17,6 +17,10 @@ app.get("/", (req, res, next) => {
     });
 });
 
+app.get("/movieinfo", (req, res, next) => {
+    res.render("pages/movieinfo", {
+    });
+});
 
 http.listen(7000, function () {
     console.log('Listening on port 7000');
