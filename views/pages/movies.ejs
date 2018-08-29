@@ -1,0 +1,23 @@
+<script>
+    $(function(){
+        console.log('hello');
+        $('#searchbutton').on('click', function(e){
+            e.preventDefault();
+            windoe.location.href = 'localhost:7000/movieinfo'
+    
+            var link1 = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query='
+            var movie = $('#searchbar').val();
+            movie = movie.replace(/\s+/g, '+');
+    
+            console.log(movie);
+    
+            $.get(link1 + movie)
+            .done (function(response){
+                console.log(response.data);
+            })
+            .fail(function(error){
+                console.log(error);
+            })
+        })
+    })
+    </script>
