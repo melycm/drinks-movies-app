@@ -13,26 +13,25 @@
         margin: 0 0 0 0;
         background-size: cover;
         background-position: center;
-        background-image: url();
+        background-image: url('<%= backdrop %>');
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
     </style>
   </head>
-<<<<<<< HEAD
   <body onload="buildinfo()">
       <% include ../partials/header %>
       <div class="movedarkbox"></div>
       <div class="backdrop">
           <div class="darkbox row">
-            <img src="" class="poster">
+            <img src="<%= poster %>" class="poster">
             <div class="movieinfo col-md-6 col-11">
-                <h2 class=movietitle ></h2>
+                <h2 class='movietitle'><%= name %></h2>
                 <h5 style="margin-top: 20px;">Overview</h5>
-                <p style="margin-top: 15px;"></p>
+                <p style="margin-top: 15px;"><%= description %></p>
                 <h5 style="margin-top: 35px; margin-bottom: -20px; margin-left: 12px;">Rating</h5>
                 <div id="chart">
-                    <canvas id="votes" height="75" width=auto></canvas>
+                    <canvas id="votes" height="75" width=auto><%= voteavg %></canvas>
                 </div>
             </div>
         </div>
@@ -41,15 +40,6 @@
 
     </div>
       <% include ../partials/footer %>
-=======
-  <body>
-      <!-- <% include ../partials/header %> -->
-
-      <p><%= name %></p>
-      <p><%= language %></p>
-      <p><%= description %></p>
-      <img src="<%= picture %>"></img>
->>>>>>> f0ed15130af9b10b545710a0069456dc1b06335b
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -58,27 +48,26 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
-        function buildinfo(){
-            new Chart(document.getElementById("votes"), {
-                type: 'pie',
-                data: {
-                labels: ['Didn\'t like it', 'Liked it'],
-                datasets: [{
-                    label: "",
-                    backgroundColor: ["#444", "#8e5ea2"],
-                    data: [3.6, 6.4]
-                }]
-                },
-                options: {
-                    responsive: false,
-                    maintainAspectRatio: true,
-                    display: true,
-                    title: {
-                        text: ''
-                    }
+        console.log(<%= voteavg %>);
+        new Chart(document.getElementById("votes"), {
+            type: 'pie',
+            data: {
+            labels: [],
+            datasets: [{
+                label: "Didn\'t like it', 'Liked it",
+                backgroundColor: ["rgba(0, 0, 51, .0)", "#8e5ea2"],
+                data: [10 - <%= voteavg %>, <%= voteavg %>]
+            }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: true,
+                display: true,
+                title: {
+                    text: ''
                 }
-            });
-        }
+            }
+        });
         Chart.defaults.global.legend.display = false;
             </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

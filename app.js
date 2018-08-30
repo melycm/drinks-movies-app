@@ -5,24 +5,24 @@ var bodyParser = require('body-parser');
 const promise = require('bluebird');
 
 'use strict';
-var request = require('request');
+// var request = require('request');
 
-var url = '';
+// var url = '';
 
-request.get({
-    url: url,
-    json: true,
-    headers: {'User-Agent': 'request'}
-  }, (err, res, data) => {
-    if (err) {
-      console.log('Error:', err);
-    } else if (res.statusCode !== 200) {
-      console.log('Status:', res.statusCode);
-    } else {
-      // data is already parsed as JSON:
-      console.log(data.html_url);
-    }
-});
+// request.get({
+//     url: url,
+//     json: true,
+//     headers: {'User-Agent': 'request'}
+//   }, (err, res, data) => {
+//     if (err) {
+//       console.log('Error:', err);
+//     } else if (res.statusCode !== 200) {
+//       console.log('Status:', res.statusCode);
+//     } else {
+//       // data is already parsed as JSON:
+//       console.log(data.html_url);
+//     }
+// });
 
 // Connect database
 const initOptions = {
@@ -36,8 +36,8 @@ const config = {
     user: 'postgres'
 };
 
-var pgp = require('pg-promise')(initOptions);
-var db = pgp(config);
+// var pgp = require('pg-promise')(initOptions);
+// var db = pgp(config);
 let axios = require('axios');
 
 app.use(express.static('public'));
@@ -45,7 +45,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(require('./form'));
+// app.use(require('./form'));
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -77,11 +77,13 @@ app.post('/searchResult', function(req, res){
     function render(movie){
         var name = movie.title
         var description = movie.overview
-        var picture = 'https://image.tmdb.org/t/p/w500/' + movie.poster_path
+        var poster = 'https://image.tmdb.org/t/p/w500/' + movie.poster_path
         var language = movie.original_language
+        var voteavg = movie.vote_average
+        var backdrop = 'https://image.tmdb.org/t/p/w1280/' + movie.backdrop_path
         // ^ data is the response from the server
         // populate this with parsed data var renderData = { }
-        var renderData = { name: name, description: description, picture: picture, language: language}
+        var renderData = { name: name, description: description, poster: poster, language: language, voteavg: voteavg, backdrop: backdrop}
         res.render('pages/movieinfo', renderData)
     }
     
@@ -104,4 +106,4 @@ http.listen(7000, function () {
     console.log('Listening on port 7000');
 });
 
-module.exports = db;
+// module.exports = db;
