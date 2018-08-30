@@ -19,21 +19,24 @@
     <div class="enterMovie">
         <h3>Search any movie you'd like to watch: </h3>
     </div>
+    <form action='/searchResult' method='POST'>
     <div class="search row">
         <div class="col-md-4 col-1"></div>
         <div class="col-md-4 col-10">
-            <input type='text' id='searchbar' placeholder='Enter any Movie...'>
+            <input type='text' id='searchbar' name='searchResult' placeholder='Enter any Movie...'>
         </div>
         <div class="col-md-4 col-1"></div>
     </div>
     <div class="row">
         <div class="col-md-4 col-1"></div>
         <div class="col-md-2 col-5">
+        
             <button type='submit' id='searchbutton'>GO!</button>
         </div>
         <div class="col-md-2 col-5">
             <button type='submit' id='randombutton'>Random</button>
         </div>
+    </form>
         <div class="col-md-5"></div>
     </div>
     <div class="moreinfo">
