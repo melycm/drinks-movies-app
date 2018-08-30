@@ -8,48 +8,70 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+    body{
+        margin: 0 0 0 0;
+        background-size: cover;
+        background-position: center;
+        background-image: url('<%= backdrop %>');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
   </head>
-  <body>
+  <body onload="buildinfo()">
       <% include ../partials/header %>
-      
-      <p><%= test %></p>
+      <div class="movedarkbox"></div>
+      <div class="backdrop">
+          <div class="darkbox row">
+            <img src="<%= poster %>" class="poster">
+            <div class="movieinfo col-md-6 col-11">
+                <h2 class='movietitle'><%= name %></h2>
+                <h5 style="margin-top: 20px;">Overview</h5>
+                <p style="margin-top: 15px;"><%= description %></p>
+                <h5 style="margin-top: 35px; margin-bottom: -20px; margin-left: 12px;">Rating</h5>
+                <div id="chart">
+                    <canvas id="votes" height="75" width=auto><%= voteavg %></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drinkinfo">
 
+    </div>
+      <% include ../partials/footer %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        console.log(<%= voteavg %>);
+        new Chart(document.getElementById("votes"), {
+            type: 'pie',
+            data: {
+            labels: [],
+            datasets: [{
+                label: "Didn\'t like it', 'Liked it",
+                backgroundColor: ["rgba(0, 0, 51, .0)", "#8e5ea2"],
+                data: [10 - <%= voteavg %>, <%= voteavg %>]
+            }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: true,
+                display: true,
+                title: {
+                    text: ''
+                }
+            }
+        });
+        Chart.defaults.global.legend.display = false;
+            </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-    <!-- <% include script.ejs %> -->
+    <% include script.ejs %>
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-
-</head>
-<body class="">
-
-<header>
-  
-</header>
-
-<main>
-    <div class="">
-        <h1>This is great</h1>
-        <p>Welcome to templating using EJS</p>
-    </div>
-</main>
-
-<footer>
-
-</footer>
-...
-<h2>Variable</h2>
-<p><%= test %></p>
-...
-</body>
-</html> -->
