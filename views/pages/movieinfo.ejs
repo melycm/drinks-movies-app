@@ -8,15 +8,70 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+    body{
+    margin: 0 0 0 0;
+    background-size: cover;
+    background-position: center;
+    background-image: url('http://image.tmdb.org/t/p/w1280//a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+    </style>
   </head>
-  <body>
+  <body onload="buildinfo()">
       <% include ../partials/header %>
+      <div class="movedarkbox"></div>
+      <div class="backdrop">
+          <div class="darkbox row">
+            <img src="http://image.tmdb.org/t/p/w342//5damnMcRFKSjhCirgX3CMa88MBj.jpg" class="poster">
+            <div class="movieinfo col-md-6 col-11">
+                <h2 class=movietitle>Cars 2</h2>
+                <h5 style="margin-top: 20px;">Overview</h5>
+                <p style="margin-top: 15px;">Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.</p>
+                <h5 style="margin-top: 35px; margin-bottom: -20px; margin-left: 12px;">Rating</h5>
+                <div id="chart">
+                    <canvas id="votes" height="75" width=auto></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="drinkinfo">
+
+    </div>
+      <% include ../partials/footer %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        function buildinfo(){
+            new Chart(document.getElementById("votes"), {
+            type: 'pie',
+            data: {
+              labels: ['Didn\'t like it', 'Liked it'],
+              datasets: [{
+                label: "",
+                backgroundColor: ["#444", "#8e5ea2"],
+                data: [3.6,6.4]
+              }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: true,
+                display: true,
+              title: {
+                text: ''
+              }
+            }
+            });
+        }
+        Chart.defaults.global.legend.display = false;
+            </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <% include script.ejs %>
