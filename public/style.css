@@ -1,4 +1,5 @@
 body{
+    margin: 0 0 0 0;
     background-size: cover;
     background-position: center;
     background-image: url('images/homephoto.jpg');
@@ -20,11 +21,11 @@ h1{
     font-family: Helvetica;
     font-weight: 400;
     letter-spacing: 2px;
-    margin-top: 200px;
+    margin-top: 400px;
 }
 
 .enterMovie{
-    padding-top: 200px;
+    padding-top: 300px;
     text-align: center;
     font-family: inherit;
     margin-left: 10%;
@@ -79,19 +80,144 @@ h3{
 
 .transbox{
     width: 100%;
-    height: 100%;
+    height: 900px;
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.7);
     background-size: 100%;
     background-repeat: no-repeat;
-    z-index: 11;
-    position: absolute;
+    z-index: 2;
+    position: relative;
     top: 0;
 }
 .moreinfo{
     width: 100%;
-    height: 500px;
-    background-color: #444;
+    height: auto;
+    background-color: #330000;
     margin-top: 215px;
+}
+
+.size{
+    max-width: 300px;
+    height: auto;
+    margin: 40px 40px 40px 40px;
+}
+
+.cardcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardbackground{
+    background-color: #330000;
+    border: none;
+}
+
+.cardtext{
+    margin-top: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9));
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.card-title{
+    margin-top: 170px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+h4{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 30px;
+    position: relative;
+    font-size: 35px;
+    font-weight: 500px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 33px;
+}
+
+#browse{
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 33px;
+}
+
+#browse:hover{
+    color: #020278;
+}
+
+a:hover{
+    color: #020278;
+    text-decoration: none;
+}
+
+.githublogos{
+    margin: 10px 8px 5px 8px;
+}
+
+.logocontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #330000;
+}
+
+footer p{
+    padding-top: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: -3px;
+}
+
+@media (max-width: 750px) {
+    h1{
+        margin-top: 450px;
+        text-align: center;
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 50px;
+    }
+    .hideit{
+        visibility: hidden;
+    }
+    .logo{
+        border: 5px solid #31342D;
+        height: 130px;
+        border-radius: 50%;
+        margin-top:6px;
+        margin-left: auto;
+        z-index: 5;
+        visibility: hidden;
+        width: 0px;
+    }
+}
+@media (max-width: 900px) {
+    .hideit{
+        visibility: hidden;
+    }
 }
