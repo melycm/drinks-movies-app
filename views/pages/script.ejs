@@ -1,0 +1,46 @@
+<script>
+    // $(function(){
+    //     console.log('hello');
+    //     $('#searchbutton').on('click', function(e){
+    
+    //         var link1 = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query='
+    //         var movie = $('#searchbar').val();
+    //         movie = movie.replace(/\s+/g, '+');
+    
+    //         console.log(movie);
+    //         window.open('localhost:7000/movieinfo');
+    //         sessionStorage.setItem("movie", movie);
+    
+    //         $.get(link1 + movie)
+    //         .done (function(response){
+    //             console.log(response.data);
+    //             $movie = sessionStorage.getItem("movie")
+    //         })
+    //         .fail(function(error){
+    //             console.log(error);
+    //         })
+            
+    //     })
+    // })
+
+    function builfinfo(){
+        var link = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query='
+        var movie = sessionStorage.getItem("movie")
+
+        var url = (link + movie);
+       $.get(url)
+       .done(function(response) {
+           let responseObject = response;
+           updateUISuccess(response)
+       })
+       .fail(function(error){
+           console.log("it doesnt work");
+           updateUIError()
+       });
+       function updateUISuccess(response){
+           console.log(url);
+       }
+       function updateUIError(){
+       }
+   };
+    </script>
