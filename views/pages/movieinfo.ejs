@@ -10,27 +10,25 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <style>
     body{
-    margin: 0 0 0 0;
-    background-size: cover;
-    background-position: center;
-    background-image: url('http://image.tmdb.org/t/p/w1280//a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+        margin: 0 0 0 0;
+        background-size: cover;
+        background-position: center;
+        background-image: url();
+        background-repeat: no-repeat;
+        background-attachment: fixed;
     }
-
     </style>
   </head>
   <body onload="buildinfo()">
       <% include ../partials/header %>
-<<<<<<< HEAD
       <div class="movedarkbox"></div>
       <div class="backdrop">
           <div class="darkbox row">
-            <img src="http://image.tmdb.org/t/p/w342//5damnMcRFKSjhCirgX3CMa88MBj.jpg" class="poster">
+            <img src="" class="poster">
             <div class="movieinfo col-md-6 col-11">
-                <h2 class=movietitle>Cars 2</h2>
+                <h2 class=movietitle ></h2>
                 <h5 style="margin-top: 20px;">Overview</h5>
-                <p style="margin-top: 15px;">Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.</p>
+                <p style="margin-top: 15px;"></p>
                 <h5 style="margin-top: 35px; margin-bottom: -20px; margin-left: 12px;">Rating</h5>
                 <div id="chart">
                     <canvas id="votes" height="75" width=auto></canvas>
@@ -42,11 +40,6 @@
 
     </div>
       <% include ../partials/footer %>
-=======
-      
-      <p><%= test %></p>
-
->>>>>>> 2e5c2a3f1713e5f7f62a0edda44583b2cc2e1b9f
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -57,23 +50,23 @@
     <script>
         function buildinfo(){
             new Chart(document.getElementById("votes"), {
-            type: 'pie',
-            data: {
-              labels: ['Didn\'t like it', 'Liked it'],
-              datasets: [{
-                label: "",
-                backgroundColor: ["#444", "#8e5ea2"],
-                data: [3.6,6.4]
-              }]
-            },
-            options: {
-                responsive: false,
-                maintainAspectRatio: true,
-                display: true,
-              title: {
-                text: ''
-              }
-            }
+                type: 'pie',
+                data: {
+                labels: ['Didn\'t like it', 'Liked it'],
+                datasets: [{
+                    label: "",
+                    backgroundColor: ["#444", "#8e5ea2"],
+                    data: [3.6, 6.4]
+                }]
+                },
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: true,
+                    display: true,
+                    title: {
+                        text: ''
+                    }
+                }
             });
         }
         Chart.defaults.global.legend.display = false;
