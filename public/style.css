@@ -7,12 +7,37 @@ body{
     background-attachment: fixed;
 }
 
-header{
+.maintitle{
     width: 100%;
     height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header{
+    background-color: #330000; 
+    height: 100px; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    width: 100%; 
+    z-index: 5;
+    position: fixed;
+}
+
+.navstyling{
+    display: flex; 
+    flex-direction: row; 
+    z-index: 5;
+}
+
+.navlinks{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-end; 
+    margin-top: 70px;
 }
 
 h1{
@@ -21,11 +46,13 @@ h1{
     font-family: Helvetica;
     font-weight: 400;
     letter-spacing: 2px;
-    margin-top: 400px;
+    padding-top: 200px;
+    margin-left: auto;
+    text-align: center;
 }
 
 .enterMovie{
-    padding-top: 300px;
+    padding-top: 100px;
     text-align: center;
     font-family: inherit;
     margin-left: 10%;
@@ -80,7 +107,7 @@ h3{
 
 .transbox{
     width: 100%;
-    height: 900px;
+    height: 730px;
     margin: 0;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.7);
@@ -94,7 +121,6 @@ h3{
     width: 100%;
     height: auto;
     background-color: #330000;
-    margin-top: 215px;
 }
 
 .size{
@@ -182,6 +208,7 @@ footer{
     width: 100%;
     height: 100px;
     background-color: #330000;
+    margin-bottom: -10px;
 }
 
 footer p{
@@ -194,16 +221,183 @@ footer p{
     margin-bottom: -3px;
 }
 
-@media (max-width: 750px) {
-    h1{
-        margin-top: 450px;
-        text-align: center;
-        margin-right: 0px;
-        margin-left: 0px;
-        font-size: 50px;
+.backdrop{
+    width: 100%;
+    height: 550px;
+}
+
+.darkbox{
+    width: 101.5%;
+    height: 600px;
+    background-color: rgba(0, 0, 51, .7);
+}
+
+.poster{
+    margin-left: 180px;
+    margin-top: 45px;
+    height: 450px;
+}
+
+.movieinfo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    color: white;
+    margin-left: 60px;
+}
+
+.movietitle{
+    font-size: 35px;
+    font-weight: 700;
+    font-family: helvetica, arial;
+    letter-spacing: 1.5px;
+}
+
+h5{
+    margin-top: 10px;
+}
+
+#votes{
+    margin-left: -108px;
+    margin-top: 35px;
+}
+
+.drinkinfo{
+    width: 100%;
+    height: 500px;
+    background-color: #330000;
+}
+
+.movedarkbox{
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .navlinks{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        margin-top: 70px;
+        margin-left: 25%;
     }
-    .hideit{
-        visibility: hidden;
+    a{
+        color: white;
+        text-decoration: none;
+        vertical-align: middle;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: 600;
+        color:	white;
+        font-family: Helvetica;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding-top: 180px;
+        margin-left: auto;
+        text-align: center;
+    }
+    .poster{
+        margin-left: 20px;
+        margin-top: 125px;
+        height: 300px;
+    }
+}
+@media (max-width: 500px) {
+    .navlinks{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center;
+        margin-left: 1%;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        vertical-align: middle;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        font-size: 40px;
+        color:	white;
+        font-family: Helvetica;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding-top: 150px;
+        margin-left: auto;
+        text-align: center;
+    }
+    .enterMovie{
+        padding-top: 70px;
+        text-align: center;
+        font-family: inherit;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        color: white;
+    }
+}
+@media (max-width: 770px) {
+    .movieinfo{
+    }
+    h1{
+        font-size: 40px;
+        color:	white;
+        font-family: Helvetica;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding-top: 150px;
+        margin-left: auto;
+        text-align: center;
+    }
+    .navlinks{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center;
+        margin-left: 0;
+    }
+    .poster{
+        margin-left: 50px;
+        margin-top: 225px;
+        height: 200px;
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .navstyling{
+        display: none;
+    }
+    .poster{
+        margin-left: 50px;
+        margin-top: 225px;
+        height: 200px;
+    }
+    .navlinks{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        margin-top: 20px;
+        margin-left: 29%;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        vertical-align: middle;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    header{
+        background-color: #330000; 
+        height: 50px; 
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between; 
+        flex-wrap: nowrap; 
+        width: 100%; 
+        z-index: 5;
+        position: fixed;
     }
     .logo{
         border: 5px solid #31342D;
@@ -212,12 +406,29 @@ footer p{
         margin-top:6px;
         margin-left: auto;
         z-index: 5;
-        visibility: hidden;
+        display: none;
         width: 0px;
     }
+    .darkbox{
+        width: 101.5%;
+        height: 700px;
+        background-color: rgba(0, 0, 51, .7);
+    }
+    .movedarkbox{
+        height: 0px;
+    }
+    .movieinfo{
+        margin-top: 130px;
+    }
+    .backdrop{
+        width: 100%;
+        height: 650px;
+    }
 }
-@media (max-width: 900px) {
-    .hideit{
-        visibility: hidden;
+@media (max-width: 1100px){
+    .poster{
+        margin-left: 100px;
+        margin-top: 125px;
+        height: 300px;
     }
 }

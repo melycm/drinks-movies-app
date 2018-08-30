@@ -2,6 +2,42 @@ let express = require('express');
 let app = express();
 var http = require('http').Server(app);
 var bodyParser = require('body-parser');
+const promise = require('bluebird');
+
+'use strict';
+// var request = require('request');
+
+// var url = '';
+
+// request.get({
+//     url: url,
+//     json: true,
+//     headers: {'User-Agent': 'request'}
+//   }, (err, res, data) => {
+//     if (err) {
+//       console.log('Error:', err);
+//     } else if (res.statusCode !== 200) {
+//       console.log('Status:', res.statusCode);
+//     } else {
+//       // data is already parsed as JSON:
+//       console.log(data.html_url);
+//     }
+// });
+
+// Connect database
+const initOptions = {
+    promiseLib: promise
+};
+
+const config = {
+    host: 'localhost',
+    port: 5432,
+    database: 'drinks-movies-app',
+    user: 'postgres'
+};
+
+// var pgp = require('pg-promise')(initOptions);
+// var db = pgp(config);
 let axios = require('axios');
 
 app.use(express.static('public'));
@@ -30,74 +66,44 @@ app.get("/movieinfo", (req, res, next) => {
     });
 });
 
-app.post('/searchResult', (req, res)=>{
-   searchResult = req.body.searchResult
-    var movieInfo = []
+app.post('/searchResult', function(req, res){
+    searchResult = req.body.searchResult
+    var movieinfo = []
     var result1 = res.results;
     var movie = req.body.searchResult;
     newMovie = movie.replace(/\s+/g, '+');
     let url = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query=' + newMovie
     
-    function render(data){
+    function render(movie){
+        var name = movie.title
+        var description = movie.overview
+        var poster = 'https://image.tmdb.org/t/p/w500/' + movie.poster_path
+        var language = movie.original_language
+        var voteavg = movie.vote_average
+        var backdrop = 'https://image.tmdb.org/t/p/w1280/' + movie.backdrop_path
         // ^ data is the response from the server
         // populate this with parsed data var renderData = { }
-        var renderData = { test: 'test'}
+        var renderData = { name: name, description: description, poster: poster, language: language, voteavg: voteavg, backdrop: backdrop}
         res.render('pages/movieinfo', renderData)
     }
     
     axios.get(url)
-    .then(function(res) {
-        console.log(res.data.results[0].title)
-
-        // res.render('pages/movieinfo', {test: 'test'})
-        render()
-        // var name = res.results[0]
-        // console.log(movieInfo)
-        // console.log(res.data.url);
-        // console.log(res.data.explanation);
+    .then(function(response) {
+        if(response && response.data && response.data.results){
+            if (response.data.results[0]){
+                render(response.data.results[0])
+            }
+            // response.data.results[0].title
+        }
     })
     .catch(function(error) {
         console.log(error);
     });
-    //res.redirect('/movieinfo')
+    // res.redirect('/movieinfo')
 })
-
-
-// app.get('/test', (req, res)=>{
-//     searchResult = req.body.searchResult
-//      var movieInfo = []
-//      var result1 = res.results;
-//     //  let movie = req.body.searchResult;
-//     let movie = "The Devil Wears Prada";
-//     let  newMovie = movie.replace(/\s+/g, '+');
-
-//     //  newMovie = movie.replace(' ','+');
-//      let url = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query=' + newMovie
-//      console.log(url);
-//      axios.get(url)
-//      .then(function(res){
-//             //console.log(res)
-        
-        
-//         // var name = res.results[0].title;
-//         console.log('i am here');
-//        //  console.log(movieInfo)
-//        //  console.log(res.data.url);
-//        //  console.log(res.data.explanation);
-//        console.log(res.data.results[0].title)
-    
-//     var name = res.results;
-//      })
-//      .catch(function(err){
-//          console.log(err);
-//      })
-    
-//      res.send('hello');
-  
-//  })
-    
 
 http.listen(7000, function () {
     console.log('Listening on port 7000');
 });
 
+// module.exports = db;
