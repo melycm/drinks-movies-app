@@ -2,7 +2,6 @@ let express = require('express');
 let app = express();
 var http = require('http').Server(app);
 var bodyParser = require('body-parser');
-<<<<<<< HEAD
 const promise = require('bluebird');
 
 'use strict';
@@ -39,9 +38,7 @@ const config = {
 
 var pgp = require('pg-promise')(initOptions);
 var db = pgp(config);
-=======
 let axios = require('axios');
->>>>>>> 856e84f0200d92345bc40cc02ed54929dfc7c10c
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
@@ -140,7 +137,4 @@ http.listen(7000, function () {
     console.log('Listening on port 7000');
 });
 
-<<<<<<< HEAD
 module.exports = db;
-=======
->>>>>>> 856e84f0200d92345bc40cc02ed54929dfc7c10c
