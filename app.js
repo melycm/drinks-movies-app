@@ -66,6 +66,16 @@ app.get("/movieinfo", (req, res, next) => {
     });
 });
 
+app.get("/login", (req, res, next) => {
+    res.render("pages/login", {
+    });
+});
+
+app.get("/signup", (req, res, next) => {
+    res.render("pages/signup", {
+    });
+});
+
 app.post('/searchResult', function(req, res){
     searchResult = req.body.searchResult
     var movieinfo = []

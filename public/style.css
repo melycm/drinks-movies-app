@@ -228,8 +228,9 @@ footer p{
 
 .darkbox{
     width: 101.5%;
-    height: 600px;
+    height: auto;
     background-color: rgba(0, 0, 51, .7);
+    padding-bottom: 350px;
 }
 
 .poster{
@@ -264,22 +265,79 @@ h5{
 
 .drinkinfo{
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: #330000;
+    position: relative;
+    padding-bottom: 25px;
 }
 
 .movedarkbox{
     height: 100px;
 }
 
+.cocktailphoto{
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.drinktitle{
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 45px;
+}
+
+.drinkdetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ingredients{
+    border: 2px solid white;
+    width: 300px;
+    margin-right: 20px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+li{
+    color: white;
+}
+
+.recipe{
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.signin{
+    height: 650px;
+    width: 100vw;
+    background-color: #330000;
+    position: relative;
+}
+
+.formsquare{
+    position: relative;
+    border: 2px solid white;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    height: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signinfields{
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
 @media (max-width: 768px) {
-    .navlinks{
-        display: flex; 
-        flex-direction: row; 
-        justify-content: center; 
-        margin-top: 70px;
-        margin-left: 25%;
-    }
     a{
         color: white;
         text-decoration: none;
@@ -305,12 +363,6 @@ h5{
     }
 }
 @media (max-width: 500px) {
-    .navlinks{
-        display: flex; 
-        flex-direction: row; 
-        justify-content: center;
-        margin-left: 1%;
-    }
     a{
         color: white;
         text-decoration: none;
@@ -339,7 +391,12 @@ h5{
     }
 }
 @media (max-width: 770px) {
-    .movieinfo{
+    .navlinks{
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-evenly;
+        margin-top: 20px;
+        margin-left: 5%;
     }
     h1{
         font-size: 40px;
@@ -351,12 +408,6 @@ h5{
         margin-left: auto;
         text-align: center;
     }
-    .navlinks{
-        display: flex; 
-        flex-direction: row; 
-        justify-content: center;
-        margin-left: 0;
-    }
     .poster{
         margin-left: 50px;
         margin-top: 225px;
@@ -365,6 +416,9 @@ h5{
     }
 }
 @media (max-width: 900px) {
+    .cocktailphoto{
+        display: none;
+    }
     .navstyling{
         display: none;
     }
@@ -376,9 +430,9 @@ h5{
     .navlinks{
         display: flex; 
         flex-direction: row; 
-        justify-content: center; 
+        justify-content: space-evenly; 
         margin-top: 20px;
-        margin-left: 29%;
+        margin-left: 35%;
     }
 
     a{
@@ -411,7 +465,7 @@ h5{
     }
     .darkbox{
         width: 101.5%;
-        height: 700px;
+        height: auto;
         background-color: rgba(0, 0, 51, .7);
     }
     .movedarkbox{
@@ -424,11 +478,39 @@ h5{
         width: 100%;
         height: 650px;
     }
+    .drinkdetails{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .recipe{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .ingredients{
+        text-align: center;
+        margin-left: 50%;
+        border: 2px solid white;
+        width: 300px;
+        margin-right: 50%;
+    }
 }
 @media (max-width: 1100px){
     .poster{
         margin-left: 100px;
         margin-top: 125px;
         height: 300px;
+    }
+    .drinkdetails{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .ingredients{
+        border: 2px solid white;
+        width: 300px;
     }
 }
