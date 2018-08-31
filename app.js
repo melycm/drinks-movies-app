@@ -45,7 +45,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-// app.use(require('./form'));
+app.use(require('./routes/form'));
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -66,7 +66,20 @@ app.get("/movieinfo", (req, res, next) => {
     });
 });
 
+<<<<<<< HEAD
 var movieData = null;
+=======
+app.get("/login", (req, res, next) => {
+    res.render("pages/login", {
+    });
+});
+
+app.get("/signup", (req, res, next) => {
+    res.render("pages/signup", {
+    });
+});
+
+>>>>>>> c43533765c116145ddd5b894a1fb9c98baec2489
 app.post('/searchResult', function(req, res){
     searchResult = req.body.searchResult
     var movieinfo = []
