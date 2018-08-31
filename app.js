@@ -45,7 +45,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-// app.use(require('./form'));
+app.use(require('./routes/form'));
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
