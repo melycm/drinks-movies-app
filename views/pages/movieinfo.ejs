@@ -44,7 +44,7 @@
                 <div class="drinkdetails">
                     <div class="ingredients col-xl-4 col-11">
                         <h3 style="margin-left: 23px; color: white;">Ingredients</h3>
-                        <ul>
+                        <ul id="ingredientlist">
                             <li>1 1/2 oz Tequila</li>
                             <li>1 oz Blue Curacao</li>
                             <li>1 oz Lime juice</li>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="recipe">
                         <h3>Recipe</h3>
-                        <p class="col-lg-12 col-11">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p>
+                        <p id="recipe" class="col-lg-12 col-11">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,27 @@
             }
         });
         Chart.defaults.global.legend.display = false;
-            </script>
+        console.log("<%= genre %>")
+        var drink = "";
+        if (){
+
+        }
+        var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + drink;
+        $.get(<%=  %>)
+        .done(function(response) {
+            console.log(response);
+        updateUISuccess(response)
+        })
+
+        .fail(function(error){
+            console.log(error);
+        
+            updateUIError()
+        });
+
+        function updateUISuccess(response){
+        }
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <% include script.ejs %>
