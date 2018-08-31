@@ -22,5 +22,4 @@
         var pic = "http://image.tmdb.org/t/p/w185/" + response["poster_path"];
         cardphoto.setAttribute("src", pic)
     }
-}); 
 })(); 
