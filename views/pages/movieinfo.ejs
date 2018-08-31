@@ -33,7 +33,7 @@
                 <div id="chart">
                     <canvas id="votes" height="75" width=auto><%= voteavg %></canvas>
                 </div>
-                <p id="theGenre"><% console.log(genre) %></p>
+                <p id="theGenre">"<% console.log(genre) %>"</p>
             </div>
         </div>
     </div>
@@ -41,25 +41,21 @@
         <div class="row">
             <!-- <div class="col-1"></div> -->
             <div class="col-lg-7 col-12">
-                <h2 class="drinktitle">Margarita!</h2>
+                <h2 class="drinktitle" id="drinkTitle"></h2>
                 <div class="drinkdetails">
                     <div class="ingredients col-xl-4 col-11">
                         <h3 style="margin-left: 23px; color: white;">Ingredients</h3>
-                        <ul id="ingredientlist">
-                            <li>1 1/2 oz Tequila</li>
-                            <li>1 oz Blue Curacao</li>
-                            <li>1 oz Lime juice</li>
-                            <li>Coarse Salt</li>
+                        <ul id="ingredientList">
                         </ul>
                     </div>
                     <div class="recipe">
                         <h3>Recipe</h3>
-                        <p id="recipe" class="col-lg-12 col-11">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</p>
+                        <p id="recipe" class="col-lg-12 col-11"></p>
                     </div>
                 </div>
             </div>
             <div class="col-5">
-                <img class="cocktailphoto" src="https://www.thecocktaildb.com/images/media/drink/wpxpvu1439905379.jpg">
+                <img class="cocktailphoto"  id="drinkPhoto" src="">
             </div>
         </div>
     </div>
@@ -74,70 +70,62 @@
     <script>
         var genrename = "";
         if ((<%= genre %>) == 28){
-            genrename == "Action"
+            genrename = "Action"
         }
         else if ((<%= genre %>) == 12){
-            genrename == "Adventure"
+            genrename = "Adventure"
         }
         else if ((<%= genre %>) == 16){
-            genrename == "Animation"
+            genrename = "Animation"
         }
         else if ((<%= genre %>) == 35){
-            genrename == "Comedy"
+            genrename = "Comedy"
         }
         else if ((<%= genre %>) == 80){
-            genrename == "Crime"
+            genrename = "Crime"
         }
         else if ((<%= genre %>) == 99){
-            genrename == "Documentary"
+            genrename = "Documentary"
         }
         else if ((<%= genre %>) == 18){
-            genrename == "Drama"
+            genrename = "Drama"
         }
         else if ((<%= genre %>) == 10751){
-            genrename == "Family"
+            genrename = "Family"
         }
         else if ((<%= genre %>) == 14){
-            genrename == "Fantasy"
+            genrename = "Fantasy"
         }
         else if ((<%= genre %>) == 36){
-            genrename == "History"
+            genrename = "History"
         }
         else if ((<%= genre %>) == 27){ 
-            genrename == "Horror"
+            genrename = "Horror"
         }
         else if ((<%= genre %>) == 10402){
-            genrename == "Music"
+            genrename = "Music"
         }
         else if ((<%= genre %>) == 9648){
-            genrename == "Mystery"
+            genrename = "Mystery"
         }
         else if ((<%= genre %>) == 10749){
-            genrename == "Romance"
+            genrename = "Romance"
         }
         else if ((<%= genre %>) == 878){
-            genrename == "Science Fiction"
+            genrename = "Science Fiction"
         }
         else if ((<%= genre %>) == 10770){
-            genrename == "TV Movie"
+            genrename = "TV Movie"
         }
         else if ((<%= genre %>) == 53){
-            genrename == "Thriller"
+            genrename = "Thriller"
         }
         else if ((<%= genre %>) == 10752){
-            genrename == "War"
+            genrename = "War"
         }
         else if ((<%= genre %>) == 37){
-            genrename == "Western"
+            genrename = "Western"
         }
-        document.getElementById("theGenre");
-        theGenre.textContent = genrename;
-        // else {
-        //     genrename == "null"
-        // }
-
-
-
         console.log(<%= voteavg %>);
         new Chart(document.getElementById("votes"), {
             type: 'pie',
@@ -159,25 +147,102 @@
             }
         });
         Chart.defaults.global.legend.display = false;
-        console.log("<%= genre %>")
-        var drink = "";
-        if (){
-
+        
+        function getLiquor(){
+            if (genrename == "Action") {
+                return "scotch"
+            } else if (genrename == "Adventure") {
+                return "tequila"
+            } else if (genrename == "Animation") {
+                return "rum";
+            } else if (genrename == "Comedy") {
+                return "beer"
+            } else if (genrename == "Crime") {
+                return "Rum"
+            } else if (genrename == "Documentary") {
+                return "Brandy"
+            } else if (genrename == "Drama") {
+                return "Wine"
+            } else if (genrename == "Family") {
+                return "cachaca"
+            } else if (genrename == "History") {
+                return "gin"
+            } else if (genrename == "Horror") {
+                return "vodka"
+            } else if (genrename == "Music") {
+                return "vermouth"
+            } else if (genrename == "Mystery") {
+                return "cognac"
+            } else if (genrename == "Romance") {
+                return "wine"
+            } else if (genrename == "Science Fiction") {
+                return "mezcal"
+            } else if (genrename == "TV Movie") {
+                return "mezcal"
+            } else if (genrename == "Thiller") {
+                return "gin"
+            } else if (genrename == "War") {
+                return "whiskey"
+            } else if (genrename == "Wester") {
+                return "whiskey"
+            } else if (genrename == "Fantasy") {
+                return "absinthe";
+            } 
         }
-        var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + drink;
-        $.get(<%=  %>)
+        var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
+        console.log(url + getLiquor());
+        $.get(url + getLiquor())
         .done(function(response) {
             console.log(response);
-        updateUISuccess(response)
+            var drinklength = response["drinks"].length;
+            var randomNum = Math.floor(Math.random() * drinklength);
+            var randomDrink = response.drinks[randomNum];
+            var drinkID = randomDrink.idDrink;
+            sessionStorage.setItem("drinkID", drinkID);
         })
 
         .fail(function(error){
             console.log(error);
-        
-            updateUIError()
         });
 
-        function updateUISuccess(response){
+        // function updateUISuccess(response){
+            
+        // }
+        var drinkID = sessionStorage.getItem('drinkID')
+        console.log(drinkID);
+        $.get("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID)
+        .done(function(res) {
+        updateUISuccess(res)
+        })
+
+        .fail(function(error){
+            console.log(error);
+        });
+        function updateUISuccess(res){
+            console.log(res.drinks[0].strDrink);
+            console.log(res.drinks[0].idDrink);
+            var drinkTitle = document.getElementById("drinkTitle");
+            var ingredientList = document.getElementById("ingredientList");
+            var recipe = document.getElementById("recipe");
+            drinkTitle.textContent = res.drinks[0].strDrink + "!";
+            recipe.textContent = res.drinks[0].strInstructions;
+            var theDrink = res.drinks[0];
+            var ingredients = [];
+            var measure = [];
+            // for (var i = 1; i < 10; i++){
+            //     console.log((theDrink.strIngredient + i))
+            //     if ((theDrink.strIngredient[i]) != ""){
+            //         ingredients.push(theDrink.strIngredient[i])
+            //     }
+            // }
+            console.log(ingredients)
+            drinkPhoto.setAttribute("src", theDrink.strDrinkThumb)
+            // if (theDrink.strIngredient1 != ""){
+            //     ingredients.push("<li> " + theDrink.strIngredient1 + "</li>")
+            // } 
+            // console.log(theDrink.strIngredient1)
+            // ingredientList.appendChild(ingredients[0])
+            
         }
         </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

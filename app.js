@@ -66,9 +66,7 @@ app.get("/movieinfo", (req, res, next) => {
     });
 });
 
-<<<<<<< HEAD
 var movieData = null;
-=======
 app.get("/login", (req, res, next) => {
     res.render("pages/login", {
     });
@@ -79,7 +77,6 @@ app.get("/signup", (req, res, next) => {
     });
 });
 
->>>>>>> c43533765c116145ddd5b894a1fb9c98baec2489
 app.post('/searchResult', function(req, res){
     searchResult = req.body.searchResult
     var movieinfo = []
