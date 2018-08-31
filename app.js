@@ -66,6 +66,9 @@ app.get("/movieinfo", (req, res, next) => {
     });
 });
 
+<<<<<<< HEAD
+var movieData = null;
+=======
 app.get("/login", (req, res, next) => {
     res.render("pages/login", {
     });
@@ -76,6 +79,7 @@ app.get("/signup", (req, res, next) => {
     });
 });
 
+>>>>>>> c43533765c116145ddd5b894a1fb9c98baec2489
 app.post('/searchResult', function(req, res){
     searchResult = req.body.searchResult
     var movieinfo = []
@@ -83,6 +87,7 @@ app.post('/searchResult', function(req, res){
     var movie = req.body.searchResult;
     newMovie = movie.replace(/\s+/g, '+');
     let url = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query=' + newMovie
+    // let url2 = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + newMovie
     
     function render(movie){
         var name = movie.title
@@ -91,16 +96,22 @@ app.post('/searchResult', function(req, res){
         var language = movie.original_language
         var voteavg = movie.vote_average
         var backdrop = 'https://image.tmdb.org/t/p/w1280/' + movie.backdrop_path
+        var genre = movie.genre_ids[0];
         // ^ data is the response from the server
         // populate this with parsed data var renderData = { }
-        var renderData = { name: name, description: description, poster: poster, language: language, voteavg: voteavg, backdrop: backdrop}
+        var renderData = { name: name, description: description, poster: poster, language: language, voteavg: voteavg, backdrop: backdrop, genre: genre}
         res.render('pages/movieinfo', renderData)
     }
     
     axios.get(url)
     .then(function(response) {
+        console.log(response.data)
         if(response && response.data && response.data.results){
             if (response.data.results[0]){
+                var theMovie = response.data.results[0]
+                movieData = theMovie
+                // function logic 
+                
                 render(response.data.results[0])
             }
             // response.data.results[0].title

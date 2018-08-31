@@ -33,6 +33,7 @@
                 <div id="chart">
                     <canvas id="votes" height="75" width=auto><%= voteavg %></canvas>
                 </div>
+                <p id="theGenre"><% console.log(genre) %></p>
             </div>
         </div>
     </div>
@@ -71,6 +72,72 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
+        var genrename = "";
+        if ((<%= genre %>) == 28){
+            genrename == "Action"
+        }
+        else if ((<%= genre %>) == 12){
+            genrename == "Adventure"
+        }
+        else if ((<%= genre %>) == 16){
+            genrename == "Animation"
+        }
+        else if ((<%= genre %>) == 35){
+            genrename == "Comedy"
+        }
+        else if ((<%= genre %>) == 80){
+            genrename == "Crime"
+        }
+        else if ((<%= genre %>) == 99){
+            genrename == "Documentary"
+        }
+        else if ((<%= genre %>) == 18){
+            genrename == "Drama"
+        }
+        else if ((<%= genre %>) == 10751){
+            genrename == "Family"
+        }
+        else if ((<%= genre %>) == 14){
+            genrename == "Fantasy"
+        }
+        else if ((<%= genre %>) == 36){
+            genrename == "History"
+        }
+        else if ((<%= genre %>) == 27){ 
+            genrename == "Horror"
+        }
+        else if ((<%= genre %>) == 10402){
+            genrename == "Music"
+        }
+        else if ((<%= genre %>) == 9648){
+            genrename == "Mystery"
+        }
+        else if ((<%= genre %>) == 10749){
+            genrename == "Romance"
+        }
+        else if ((<%= genre %>) == 878){
+            genrename == "Science Fiction"
+        }
+        else if ((<%= genre %>) == 10770){
+            genrename == "TV Movie"
+        }
+        else if ((<%= genre %>) == 53){
+            genrename == "Thriller"
+        }
+        else if ((<%= genre %>) == 10752){
+            genrename == "War"
+        }
+        else if ((<%= genre %>) == 37){
+            genrename == "Western"
+        }
+        document.getElementById("theGenre");
+        theGenre.textContent = genrename;
+        // else {
+        //     genrename == "null"
+        // }
+
+
+
         console.log(<%= voteavg %>);
         new Chart(document.getElementById("votes"), {
             type: 'pie',
