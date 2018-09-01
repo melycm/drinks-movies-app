@@ -396,7 +396,6 @@ li{
         flex-direction: row; 
         justify-content: space-evenly;
         margin-top: 20px;
-        margin-left: 5%;
     }
     h1{
         font-size: 40px;
@@ -432,7 +431,7 @@ li{
         flex-direction: row; 
         justify-content: space-evenly; 
         margin-top: 20px;
-        margin-left: 35%;
+        margin-left: 15px;
     }
 
     a{
