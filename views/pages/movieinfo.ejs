@@ -45,7 +45,7 @@
                 <div class="drinkdetails">
                     <div class="ingredients col-xl-4 col-11">
                         <h3 style="margin-left: 23px; color: white;">Ingredients</h3>
-                        <ul id="ingredientList">
+                        <ul id="ingredientList" style="color: white;">
                         </ul>
                     </div>
                     <div class="recipe">
@@ -229,20 +229,91 @@
             var theDrink = res.drinks[0];
             var ingredients = [];
             var measure = [];
-            // for (var i = 1; i < 10; i++){
-            //     console.log((theDrink.strIngredient + i))
-            //     if ((theDrink.strIngredient[i]) != ""){
-            //         ingredients.push(theDrink.strIngredient[i])
-            //     }
-            // }
-            console.log(ingredients)
+            // not sure why but this doesnt work with 'else if'
+            if (theDrink.strMeasure1 != ""){
+                measure.push(theDrink.strMeasure1);
+            }
+            if (theDrink.strMeasure2 != ""){
+                measure.push(theDrink.strMeasure2);
+            }
+            if (theDrink.strMeasure3 != ""){
+                measure.push(theDrink.strMeasure3);
+            } 
+            if (theDrink.strMeasure4 != ""){
+                measure.push(theDrink.strMeasure4);
+            } 
+            if (theDrink.strMeasure5 != ""){
+                measure.push(theDrink.strMeasure5);
+            }
+            if (theDrink.strMeasure6 != ""){
+                measure.push(theDrink.strMeasure6);
+            }
+            if (theDrink.strMeasure7 != ""){
+                measure.push(theDrink.strMeasure7);
+            }
+            if (theDrink.strMeasure8 != ""){
+                measure.push(theDrink.strMeasure8);
+            }
+            if (theDrink.strMeasure9 != ""){
+                measure.push(theDrink.strMeasure9);
+            }
+
+            if (theDrink.strIngredient1 != ""){
+                ingredients.push(theDrink.strIngredient1);
+                var li1= document.createElement("li");
+                li1.textContent = measure[0] + " " + ingredients[0];
+                ingredientList.append(li1);
+            }
+            if (theDrink.strIngredient2 != ""){
+                ingredients.push(theDrink.strIngredient2);
+                var li2= document.createElement("li");
+                li2.textContent = measure[1] + " " + ingredients[1];
+                ingredientList.append(li2);
+            }
+            if (theDrink.strIngredient3 != ""){
+                ingredients.push(theDrink.strIngredient3);
+                var li3= document.createElement("li");
+                li3.textContent = measure[2] + " " + ingredients[2];
+                ingredientList.append(li3);
+            } 
+            if (theDrink.strIngredient4 != ""){
+                ingredients.push(theDrink.strIngredient4);
+                var li4= document.createElement("li");
+                li4.textContent = measure[3] + " " + ingredients[3];
+                ingredientList.append(li4);
+            } 
+            if (theDrink.strIngredient5 != ""){
+                ingredients.push(theDrink.strIngredient5);
+                var li5= document.createElement("li");
+                li5.textContent = measure[4] + " " + ingredients[4];
+                ingredientList.append(li5);
+            }
+            if (theDrink.strIngredient6 != ""){
+                ingredients.push(theDrink.strIngredient6);
+                var li6= document.createElement("li");
+                li6.textContent = measure[5] + " " + ingredients[5];
+                ingredientList.append(li6);
+            }
+            if (theDrink.strIngredient7 != ""){
+                ingredients.push(theDrink.strIngredient7);
+                var li7= document.createElement("li");
+                li7.textContent = measure[6] + " " + ingredients[6];
+                ingredientList.append(li6);
+            }
+            if (theDrink.strIngredient8 != ""){
+                ingredients.push(theDrink.strIngredient8);
+                var li8= document.createElement("li");
+                li8.textContent = measure[7] + " " + ingredients[7];
+                ingredientList.append(li8);
+            }
+            if (theDrink.strIngredient9 != ""){
+                ingredients.push(theDrink.strIngredient9);
+                var li9= document.createElement("li");
+                li9.textContent = measure[8] + " " + ingredients[8];
+                ingredientList.append(li9);
+            }
+            console.log(ingredients);
             drinkPhoto.setAttribute("src", theDrink.strDrinkThumb)
-            // if (theDrink.strIngredient1 != ""){
-            //     ingredients.push("<li> " + theDrink.strIngredient1 + "</li>")
-            // } 
-            // console.log(theDrink.strIngredient1)
-            // ingredientList.appendChild(ingredients[0])
-            
         }
         </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
