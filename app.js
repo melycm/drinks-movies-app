@@ -67,6 +67,11 @@ app.get("/movieinfo", (req, res, next) => {
     });
 });
 
+app.get("/profile", (req, res, next) => {
+    res.render("pages/profile", {
+    });
+});
+
 var movieData = null;
 app.get("/login", (req, res, next) => {
     res.render("pages/login", {
