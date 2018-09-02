@@ -11,19 +11,22 @@
         crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="form.css" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
 
     <body id='pageId'>
     
-    <form action="/submit" method="POST">
+    <% include ../partials/header %>   
 
-        <label for="">
-            <h1 style="color: black">Ratings & Reviews</h1>
-        </label>
-        
-        <br><br>
+    <form action="/submit" method="POST">
+     
+        <div class="display-3" style="color: black; padding-top: 12%">Ratings & Reviews</div>
+            
+        <hr>
+            
+        <br>
         Username: <input type="text" name="username">
-                      
+                          
         <br><br>  
         What movie did you see? <input type="text" name="movie_title" placeholder="Movie Title"> 
         Rating:
@@ -41,16 +44,14 @@
         
         <br><br>
         Comments: <input type="text" name="comments" min="0" max="500" placeholder="Type here">
-            
+                
         <br><br>
         <button type="submit">Submit Review</button>
-    </form>
-
-    <div class="contact">
-        <p></p>
-    </div>
-                
-    </body>
-    <script src="form.js"></script>
+    </frm>
     
+    <% include ../partials/footer %>
+                    
+    </body>
+    <script src="../../routes/form.js"></script>
+        
 </html>

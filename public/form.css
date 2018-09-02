@@ -1,21 +1,11 @@
-body {
-    background-image: URL(https://thumbs.dreamstime.com/b/soirée-cinéma-le-billet-ouvert-de-boîte-à-maïs-éclaté-de-bobine-de-panneau-de-clapet-de-facecontrol-de-tourniquet-de-97138308.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position-y: -20%;
-    background-size: 100%;
-    opacity: 0.8;
-    z-index: 1;
-}
-
 form {
-    /* background-color: white; */
+    background-color: white;
     z-index: 2;
-    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 3%;
     font-weight: bold;
-    font-size: 1.3em;
-    text-shadow: -1px 0 black, 0 1px black;
-    
+    font-size: 1.3em;      
 }
 
 h1 {

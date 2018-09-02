@@ -368,6 +368,18 @@ li{
 
 .mymovies h4{
     text-decoration: underline;
+.reply, .goHome {
+    position: relative; 
+}
+
+.reply {
+    top: 300px;
+    background-color: white;
+    width: 500px;
+}
+
+.goHome {
+    top: 450px;
 }
 
 @media (max-width: 768px) {
