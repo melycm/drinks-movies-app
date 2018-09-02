@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body{
     margin: 0 0 0 0;
     background-size: cover;
@@ -49,6 +50,7 @@ h1{
     padding-top: 200px;
     margin-left: auto;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .enterMovie{
@@ -62,7 +64,7 @@ h1{
 }
 
 h3{
-    font-family: arial;
+    font-family: 'Roboto', sans-serif;
 }
 
 .search{
@@ -206,7 +208,7 @@ a:hover{
 
 footer{
     width: 100%;
-    height: 100px;
+    height: 120px;
     background-color: #330000;
     margin-bottom: -10px;
 }
@@ -315,9 +317,9 @@ li{
 
 .signin{
     height: 650px;
-    width: 100vw;
+    width: 100%;
     background-color: #330000;
-    position: relative;
+    position: absolute;
 }
 
 .formsquare{
@@ -335,6 +337,37 @@ li{
     width: 300px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
+}
+
+.accountpage{
+    background-color: #330000;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.name{
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid white;
+    width: 300px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0 10px 0;
+}
+
+.mymovies{
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+}
+
+.mymovies h4{
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -362,6 +395,7 @@ li{
         height: 300px;
     }
 }
+
 @media (max-width: 500px) {
     a{
         color: white;
@@ -413,6 +447,14 @@ li{
         height: 200px;
         display: none;
     }
+
+    .movieinfo{
+        text-align: center;
+    }
+
+    #chart{
+        margin-left: auto;
+    }
 }
 @media (max-width: 900px) {
     .cocktailphoto{
@@ -431,7 +473,7 @@ li{
         flex-direction: row; 
         justify-content: space-evenly; 
         margin-top: 20px;
-        margin-left: 15px;
+        margin-left: 19%;
     }
 
     a{
@@ -494,6 +536,22 @@ li{
         border: 2px solid white;
         width: 300px;
         margin-right: 50%;
+    }
+    .formsquare{
+        position: relative;
+        border: 2px solid white;
+        text-align: center;
+        margin: 100px auto;
+        width: 350px;
+        height: auto;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .signin{
+        height: 100%;
+        width: 100%;
+        background-color: #330000;
+        position: absolute;
     }
 }
 @media (max-width: 1100px){

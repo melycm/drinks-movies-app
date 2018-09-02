@@ -183,11 +183,13 @@
                 return "gin"
             } else if (genrename == "War") {
                 return "whiskey"
-            } else if (genrename == "Wester") {
+            } else if (genrename == "Western") {
                 return "whiskey"
             } else if (genrename == "Fantasy") {
                 return "absinthe";
-            } 
+            } else{
+                return "gin"
+            }
         }
         var url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=";
         console.log(url + getLiquor());
