@@ -337,6 +337,20 @@ li{
     font-weight: 600;
 }
 
+.reply, .goHome {
+    position: relative; 
+}
+
+.reply {
+    top: 300px;
+    background-color: white;
+    width: 500px;
+}
+
+.goHome {
+    top: 450px;
+}
+
 @media (max-width: 768px) {
     a{
         color: white;
