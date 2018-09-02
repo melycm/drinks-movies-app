@@ -22,12 +22,9 @@ router.post('/submit', (req, res) => {
 
     //input where I'd store it into a database
     // res.redirect('/form');
-    res.send(`Your review has been submitted!
+    res.render('pages/submit');
+
     
-    <br><br>
-    Please wait a moment for your review to show on the movie's page. Thanks!
-    
-    `);
 
     db.review.create({username: req.body.name, rating: req.body.rating, comments: req.body.comments})
     .then(() => {
@@ -46,11 +43,5 @@ router.post('/submit', (req, res) => {
     })
 })
 
-// router.post('/test', (req, res) => {
-//     var userReview='';
 
-//     userReview += 
-//     userReview += req.body.comment;
-//     userReview += 
-// })
 module.exports = router;
