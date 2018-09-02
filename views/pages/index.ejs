@@ -12,9 +12,12 @@
   </head>
   <body onload="loadrandomposter1(); loadrandomposter2(); loadrandomposter3(); popularposter1(); popularposter2(); popularposter3();">
     <% include ../partials/header.ejs %>
-    <div class="transbox">
+    <div class="row transbox">
+        <div class="col-12">
+
+        
     <div class="titlepage">
-        <h1>Movology</h1>
+        <h1>You pick the movie, we pick the drink.</h1>
     </div>
     <div class="enterMovie">
         <h3>Search any movie you'd like to watch: </h3>
@@ -25,7 +28,7 @@
         <div class="col-md-4 col-10">
             <input type='text' id='searchbar' name='searchResult' placeholder='Enter any Movie...'>
         </div>
-        <div class="col-md-4 col-1"></div>
+        <!-- <div class="col-md-4 col-1"></div> -->
     </div>
     <div class="row">
         <div class="col-md-4 col-1"></div>
@@ -36,9 +39,10 @@
         <div class="col-md-5"></div>
     </div>
     </div>
+    </div>
     <div class="moreinfo">
-        <h4>Current Most Popular Movies</h3>
-        <div class="cardcontainer row">
+            <h4>Current Most Popular Movies</h3>
+        <div class="row cardcontainer">
             <div class="card cardbackground text-white size col-md-4 col-12">
                 <img class="card-img" alt="Card image" id="popularphoto1" src="">
                 <div class="card-img-overlay cardtext">
