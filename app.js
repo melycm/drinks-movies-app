@@ -4,6 +4,15 @@ var http = require('http').Server(app);
 var bodyParser = require('body-parser');
 const promise = require('bluebird');
 
+app.set('view engine', 'ejs');
+
+// app.use(require('./routes/index'));
+app.use(require('./routes/login'));
+
+app.use(require('./routes/register'));
+// app.use(require('./routes/dashboard'));
+// app.use(require('./routes/logout'));
+
 'use strict';
 // var request = require('request');
 
