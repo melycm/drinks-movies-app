@@ -368,6 +368,8 @@ li{
 
 .mymovies h4{
     text-decoration: underline;
+}
+
 .reply, .goHome {
     position: relative; 
 }
@@ -380,6 +382,27 @@ li{
 
 .goHome {
     top: 450px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+}
+.reviewbutton{
+    background-color: rgba(0, 0, 51, 1);
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    margin-top: -120px;
+    margin-left: 300px;
+}
+
+.reviewbutton p{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    vertical-align: middle;
+    margin-top: 5px;
 }
 
 @media (max-width: 768px) {

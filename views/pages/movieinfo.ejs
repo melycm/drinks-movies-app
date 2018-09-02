@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
     <style>
     body{
@@ -32,6 +33,9 @@
                 <h5 style="margin-top: 35px; margin-bottom: -20px; margin-left: 12px;">Rating</h5>
                 <div id="chart">
                     <canvas id="votes" height="75" width=auto><%= voteavg %></canvas>
+                </div>
+                <div class="reviewbutton">
+                    <p><i class="fas fa-film"></i>  Write a Review</p>
                 </div>
                 <p id="theGenre"><%= console.log(genre) %></p>
             </div>
