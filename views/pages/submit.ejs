@@ -13,9 +13,14 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
 
-    <body class="row" id='pageId'>
+    <body id='pageId'>
     
-    <% include ../partials/header %>   
+    <div class="row">
+
+    <div class="col-12">
+        <% include ../partials/header %>  
+    </div>
+     
 
     <div class="reply col-md-8 col-xs-4 offset-2">
     <p style="text-align: center; padding-top: 10px">Your review has been submitted!
@@ -26,12 +31,29 @@
 
     </div>
 
-    <div>
+    <!-- <div class="col-md-4 offset-6">
         <button type='goHome' class='goHome'>Home</button>
-    </div>
+    </div> -->
 
-    <% include ../partials/footer %>
-                
+    <footer class="footer">
+        <div class="logocontainer">
+            <a href="https://github.com/melycm">
+                <img src="images/github.png" alt="Github Link" class="githublogos">
+            </a>
+            <a href="https://github.com/JeffDanh">
+                <img src="images/github.png" alt="Github Link" class="githublogos">
+            </a>
+            <a href="https://github.com/namaslay33">
+                <img src="images/github.png" alt="Github Link" class="githublogos">
+            </a>
+            <a href="https://github.com/Jeith">
+                <img src="images/github.png" alt="Github Link" class="githublogos">
+            </a>
+        </div>
+        <p>© 2018 Copyright: Melissa Cantu, Jeff Duong, Skylar Hunt and Keith Pittman</p>
+    </footer>
+
+    </div>           
     </body>
     <script src="../../routes/form.js"></script>
     <script></script>

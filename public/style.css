@@ -394,6 +394,10 @@ li{
     top: 450px;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0px;
+}
 .reviewbutton{
     background-color: rgba(0, 0, 51, 1);
     width: 140px;

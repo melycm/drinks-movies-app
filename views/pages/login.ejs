@@ -10,22 +10,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body id="<%= pageID %>">
         <% include ../partials/header %>
         <div class="movedarkbox"></div>
         <div class="signin">
             <div class="movedarkbox"></div>
             <div class="formsquare">
                 <h2 style="margin-bottom: 10px; margin-top: 5px;">Log in</h2>
-                <p>Email:</p>
-                <form style="margin-bottom: 15px;">
-                    <input type="text" name="firstname" class="signinfields">
-                </form>
-                <p>Password:</p>
-                <form style="margin-bottom: 25px;">
+                
+                <form action="/login" method="post" style="margin-bottom: 15px;">
+                    <p>Username:</p>
+                    <input type="text" name="username" class="signinfields">
+                    <p>Password:</p>
                     <input type="password" name="password" class="signinfields">
+                    <br>
+                    <input type="submit" value="Log In"/>
                 </form>
-                <a href="http://localhost:7000/signup" style="color: blue; font-size:15px; margin: 0 auto;">Dont have an account? Sign up!</a>
+                
+                <!-- <form style="margin-bottom: 25px;">
+                    
+                </form> -->
+                
+                <a href="/register" style="color: blue; font-size:15px; margin: 0 auto;">Dont have an account? Sign up!</a>
             </div>
         </div>
         <% include ../partials/footer.ejs %>

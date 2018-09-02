@@ -35,7 +35,27 @@
         
          
         <br><br>
-        How would you rate your drink selection? <input type="text">
+        How would you rate your drink selection? 
+        <div class="form-check form-check-inline">
+            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+            1
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+            2
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+            3
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+            4
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+            5
+        </div>
         
         <br><br>
         Did you like the movie and drink combo? 
@@ -43,11 +63,13 @@
         <input type="radio" value="No">No
         
         <br><br>
-        Comments: <input type="text" name="comments" min="0" max="500" placeholder="Type here">
+        Comments: 
+        <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" minlength="0" maxlength="500" rows="3"></textarea>
+        </div>
                 
-        <br><br>
         <button type="submit">Submit Review</button>
-    </frm>
+    </form>
     
     <% include ../partials/footer %>
                     
