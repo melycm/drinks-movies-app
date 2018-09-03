@@ -3,7 +3,7 @@ body{
     margin: 0 0 0 0;
     background-size: cover;
     background-position: center;
-    background-image: url('images/homephoto.jpg');
+    background-image: url('images/Attachment-1.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -66,6 +66,7 @@ h1{
 
 h3{
     font-family: 'Roboto', sans-serif;
+    font-size: 25px;
 }
 
 .search{
@@ -85,8 +86,8 @@ h3{
     width: 100%;
     float: left;
     padding: 5px;
-    background: #444;
-    color: white;
+    background-color: rgb(235, 235, 51);
+    color: black;
     font-size: 17px;
     border: 1px solid black;
     border-left: none; /* Prevent double borders */
@@ -94,6 +95,7 @@ h3{
     margin-top: 25px;
     font-family: inherit;
     border-radius: 5px;
+    font-weight: 400;
 }
 
 #randombutton{
@@ -192,11 +194,11 @@ a{
 }
 
 #browse:hover{
-    color: #020278;
+    color: rgb(235, 235, 51);
 }
 
 a:hover{
-    color: #020278;
+    color: rgb(235, 235, 51);
     text-decoration: none;
 }
 
@@ -262,6 +264,7 @@ footer p{
 
 h5{
     margin-top: 10px;
+    font-size: 15px;
 }
 
 #votes{
