@@ -86,7 +86,7 @@ h3{
     width: 100%;
     float: left;
     padding: 5px;
-    background-color: rgb(235, 235, 51);
+    background-color: rgb(207, 207, 52);
     color: black;
     font-size: 17px;
     border: 1px solid black;
@@ -412,13 +412,37 @@ li{
 }
 .reviewbutton{
     background-color: rgba(0, 0, 51, 1);
-    width: 175px;
+    width: 186px;
     height: 40px;
     text-align: center;
     vertical-align: middle;
     border: 1px solid white;
     margin-left: 300px;
-    margin-top: 20px;
+    margin-top: 340px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.addFavorites{
+    background-color: rgba(0, 0, 51, 1);
+    width: 186px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white;
+    margin-left: 300px;
+    margin-top: 270px;
+    position: absolute;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.addFavorites:hover a{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    vertical-align: middle;
+    margin-top: 5px;
+    color: rgb(235, 235, 51);
 }
 
 .writereview{
@@ -430,13 +454,8 @@ li{
     margin-left: 300px;
 }
 
-.reviewbutton p{
-    font-family: 'Roboto', Helvetica, sans-serif;
-    vertical-align: middle;
-    margin-top: 5px;
-}
 
-.reviewbutton:hover p{
+.reviewbutton:hover a{
     font-family: 'Roboto', Helvetica, sans-serif;
     vertical-align: middle;
     margin-top: 5px;
