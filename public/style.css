@@ -1,21 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-html {
-    width: 100%;
-}
-
-/* .row {
-    margin-left: 0px;
-} */
-
 body{
     margin: 0 0 0 0;
     background-size: cover;
     background-position: center;
-    background-image: url('images/Attachment-1.gif');
+    background-image: url('images/homephoto.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
 }
 
 .maintitle{
@@ -52,11 +42,11 @@ header{
 }
 
 h1{
-    font-size: 55px;
+    font-size: 75px;
     color:	white;
     font-family: Helvetica;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     padding-top: 200px;
     margin-left: auto;
     text-align: center;
@@ -198,11 +188,11 @@ a{
 }
 
 #browse:hover{
-    color: rgb(235, 235, 51);
+    color: #020278;
 }
 
 a:hover{
-    color: rgb(235, 235, 51);
+    color: #020278;
     text-decoration: none;
 }
 
@@ -400,7 +390,7 @@ li{
 }
 .reviewbutton{
     background-color: rgba(0, 0, 51, 1);
-    width: 140px;
+    width: 175px;
     height: 40px;
     text-align: center;
     vertical-align: middle;
