@@ -49,14 +49,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
     <script> 
-        if (localStorage.getItem('movie1') != null){
             var movieposter1 = document.getElementById("movieposter1");
             var title1 = document.getElementById("title1")
             var localposter1 = localStorage.getItem("poster1");
             var localtitle1 = localStorage.getItem("movie1");
             movieposter1.setAttribute('src', localposter1);
-            title1.innerHTML = localtitle1
-        }
+            title1.innerHTML = localtitle1;
     </script>
   </body>
 </html>
