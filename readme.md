@@ -15,7 +15,7 @@ Here you will be building on some of the front end skills that you've utilized p
 <h2>Prerequisites</h2>
 For this project, you will need to have a source code editor. You will need to install node along with the following packages:
 axios, bluebird, body-parser, ejs, express, pg, pg-hstore, and sequelize.
-
+<br>
 If you plan on deploying your project, a domain name needs to be purchased. The site can be launched on Amazon Web Services(AWS) along with creating and connecting your PostgreSQL relational database. Due to the lengthy process, the documentation for these two items have been attached.... <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">Launching on AWS</a> & <a href="https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/">Connecting PostgreSQL Database.</a>
 
 <h2>Technologies Used</h2>
@@ -51,7 +51,6 @@ To see the full code, please visit <a href="">Drinks-Movies-App</a> on Github.
 <img src="./public/images/passport.png">
 
 <h2>Example of Live Application</h2>
-<hr>
 <h4>Movie Search</h4>
 <img src="./public/images/movie_search.png">
 
