@@ -209,11 +209,9 @@
             var drinkID = randomDrink.idDrink;
             sessionStorage.setItem("drinkID", drinkID);
         })
-
         .fail(function(error){
             console.log(error);
         });
-
         // function updateUISuccess(response){
             
         // }
@@ -223,7 +221,6 @@
         .done(function(res) {
         updateUISuccess(res)
         })
-
         .fail(function(error){
             console.log(error);
         });
@@ -266,7 +263,6 @@
             if (theDrink.strMeasure9 != ""){
                 measure.push(theDrink.strMeasure9);
             }
-
             if (theDrink.strIngredient1 != ""){
                 ingredients.push(theDrink.strIngredient1);
                 var li1= document.createElement("li");
@@ -323,6 +319,29 @@
             }
             console.log(ingredients);
             drinkPhoto.setAttribute("src", theDrink.strDrinkThumb)
+        }
+        var favorite = document.getElementById("favorite");
+        if (localStorage.getItem("movie1") == null){
+            favorite.onclick = function() {
+                var moviename1 = '<%= name %>';
+                var postersrc1 = '<%= poster %>';
+                localStorage.setItem("movie1", moviename1)
+                localStorage.setItem("poster1", postersrc1);
+            }
+        } else if (localStorage.getItem("movie2") == null) {
+            favorite.onclick = function() {
+                var moviename2 = '<%= name %>';
+                var postersrc2 = '<%= poster %>';
+                localStorage.setItem("movie2", moviename2)
+                localStorage.setItem("poster2", postersrc2);
+            }
+        } else if (localStorage.getItem("movie3") == null) {
+            favorite.onclick = function() {
+                var moviename3 = '<%= name %>';
+                var postersrc3 = '<%= poster %>';
+                localStorage.setItem("movie3", moviename3)
+                localStorage.setItem("poster3", postersrc3);
+            }
         }
         </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
