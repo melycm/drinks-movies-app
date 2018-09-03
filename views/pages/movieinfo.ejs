@@ -34,9 +34,11 @@
                 <div id="chart">
                     <canvas id="votes" height="75" width=auto><%= voteavg %></canvas>
                 </div>
-                <h5 class="writereview">Write a Review</h5>
+                <div id="favorite" class="addFavorites">
+                    <i class="fas fa-star"></i><a style="font-size: 15px;" href="#">Add to my favorites.</a>
+                </div>
                 <div class="reviewbutton">
-                    <p><i class="fas fa-film"></i><a href="http://localhost:7000/form">Write a Review</a></p>
+                    <i class="fas fa-film"></i><a style="font-size: 15px;" href="http://localhost:7000/form"> Write a Review</a>
                 </div>
                 <p id="theGenre"><%= console.log(genre) %></p>
             </div>
