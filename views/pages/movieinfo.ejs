@@ -28,7 +28,6 @@
             <img src="<%= poster %>" class="poster">
             <div class="movieinfo col-md-6 col-11">
                 <h2 class='movietitle'><%= name %></h2>
-                <h2></h2>
                 <h5 style="margin-top: 20px;">Overview</h5>
                 <p style="margin-top: 15px;"><%= description %></p>
                 <h5 class="ratingtitle">Rating</h5>
@@ -41,7 +40,7 @@
                 <div class="reviewbutton">
                     <i class="fas fa-film"></i><a style="font-size: 15px;" href="http://localhost:7000/form"> Write a Review</a>
                 </div>
-                <p id="theGenre"><%=  console.log(genre) %></p>
+                <p id="theGenre"><%= console.log(genre) %></p>
             </div>
         </div>
     </div>
@@ -76,13 +75,6 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script>
-        var favorite = document.getElementById("favorite");
-        favorite.addEventListener('click', function() {
-            var moviename = <%= name %>;
-            var poster = 'http://image.tmdb.org/t/p/w185/' + <%= poster %>;
-            localStorage.setItem("movie1", moviename);
-            localStorage.setItem("poster1", poster);
-        })
         var genrename = "";
         if ((<%= genre %>) == 28){
             genrename = "Action"
