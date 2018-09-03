@@ -26,6 +26,7 @@ header{
     width: 100%; 
     z-index: 5;
     position: fixed;
+    box-shadow: 0 8px 6px -6px #999;
 }
 
 .navstyling{
@@ -42,7 +43,7 @@ header{
 }
 
 h1{
-    font-size: 75px;
+    font-size: 55px;
     color:	white;
     font-family: Helvetica;
     font-weight: 400;
@@ -91,6 +92,7 @@ h3{
     cursor: pointer;
     margin-top: 25px;
     font-family: inherit;
+    border-radius: 5px;
 }
 
 #randombutton{
@@ -327,16 +329,30 @@ li{
     border: 2px solid white;
     text-align: center;
     margin: 0 auto;
-    width: 500px;
-    height: auto;
+    width: 400px;
+    height: 250px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7F7F7;
+    border-radius: 10px;
 }
 
 .signinfields{
     width: 300px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 13px;
+}
+
+.login {
+    background-color: rgb(235, 235, 51);
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 5px;
 }
 
 .accountpage{

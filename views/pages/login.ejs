@@ -16,25 +16,26 @@
         <div class="signin">
             <div class="movedarkbox"></div>
             <div class="formsquare">
-                <h2 style="margin-bottom: 10px; margin-top: 5px;">Log in</h2>
+                <h2 style="margin-bottom: 10px; margin-top: 13px; color:black; font-size: 1.8em;">Login to your account</h2>
                 
                 <form action="/login" method="post" style="margin-bottom: 15px;">
-                    <p>Username:</p>
-                    <input type="text" name="username" class="signinfields">
-                    <p>Password:</p>
-                    <input type="password" name="password" class="signinfields">
+                    <!-- <p>Username:</p> -->
+                    <input type="text" name="username" class="signinfields" placeholder="Username">
+                    <!-- <p>Password:</p> -->
+                    <input type="password" name="password" class="signinfields" placeholder="Password">
                     <br>
-                    <input type="submit" value="Log In"/>
+                    <input class="login" type="submit" value="Login"/>
                 </form>
                 
                 <!-- <form style="margin-bottom: 25px;">
                     
                 </form> -->
                 
-                <a href="/register" style="color: blue; font-size:15px; margin: 0 auto;">Dont have an account? Sign up!</a>
+                <a href="/register" style="color: black; font-size:15px; margin: 0 auto;">Dont have an account? Sign up!</a>
             </div>
         </div>
         <% include ../partials/footer.ejs %>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
