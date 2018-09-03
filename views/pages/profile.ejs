@@ -27,15 +27,15 @@
                     </div>
                 </div>
                 <div class="card cardbackground text-white size col-md-4 col-12">
-                    <img class="card-img" alt="Card image" src="http://image.tmdb.org/t/p/w185//nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg">
+                    <img class="card-img" alt="Card image" id="movieposter2">
                     <div class="card-img-overlay cardtext">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title" id="title2"></h5>
                     </div>
                 </div>
                 <div class="card cardbackground text-white size col-md-4 col-12">
-                    <img class="card-img" alt="Card image" src="http://image.tmdb.org/t/p/w185//nBNZadXqJSdt05SHLqgT0HuC5Gm.jpg">
+                    <img class="card-img" alt="Card image" id="movieposter3">
                     <div class="card-img-overlay cardtext">
-                    <h5 class="card-title"></h5>
+                    <h5 class="card-title" id="title3"></h5>
                     </div>
                 </div>
             </div>
@@ -55,6 +55,20 @@
             var localtitle1 = localStorage.getItem("movie1");
             movieposter1.setAttribute('src', localposter1);
             title1.innerHTML = localtitle1;
+
+            var movieposter2 = document.getElementById("movieposter2");
+            var title2 = document.getElementById("title2")
+            var localposter2 = localStorage.getItem("poster2");
+            var localtitle2 = localStorage.getItem("movie2");
+            movieposter2.setAttribute('src', localposter2);
+            title2.innerHTML = localtitle2;
+
+            var movieposter3 = document.getElementById("movieposter3");
+            var title3 = document.getElementById("title3")
+            var localposter3 = localStorage.getItem("poster3");
+            var localtitle3 = localStorage.getItem("movie3");
+            movieposter3.setAttribute('src', localposter3);
+            title3.innerHTML = localtitle3;
     </script>
   </body>
 </html>
