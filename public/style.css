@@ -86,6 +86,7 @@ h3{
     width: 100%;
     height: 35px;
     font-family: inherit;
+    border: 1px solid black;
     box-shadow: 0px 2px 5px 2px #888, inset, 0 0 20px 2px black;
 }
 
@@ -133,6 +134,7 @@ h3{
     width: 100%;
     height: auto;
     background-color: #330000;
+    border-top: black solid 10px;
 }
 
 .size{
@@ -326,7 +328,8 @@ li{
 }
 
 .signin{
-    height: 650px;
+    min-height: 650px;
+    height: auto;
     width: 100%;
     background-color: #330000;
     position: absolute;
@@ -405,6 +408,15 @@ li{
     text-align: center;
     vertical-align: middle;
     border: 1px solid white;
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+.writereview{
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
     margin-top: -120px;
     margin-left: 300px;
 }
@@ -412,6 +424,59 @@ li{
 .reviewbutton p{
     font-family: 'Roboto', Helvetica, sans-serif;
     vertical-align: middle;
+    margin-top: 5px;
+}
+
+.reviewbutton:hover p{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    vertical-align: middle;
+    margin-top: 5px;
+    color: rgb(235, 235, 51);
+}
+
+.ratingtitle{
+    margin-top: 35px; 
+    margin-bottom: -20px; 
+    margin-left: 12px;
+}
+
+#login-box{
+    background: whitesmoke;
+    width: 400px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-top: 125px;
+    margin-left: -200px;
+    border: 1px solid black;
+}
+
+#login-box h1{
+    font-size: 55px;
+    color:	#330000;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signup{
+    height: 800px;
+    width: 100%;
+    background-color: #330000;
+    position: absolute;
+}
+
+.registerbtn{
+    margin: 0 auto;
+    display: absolute;
+    background-color: blue;
+    color: white;
+    width: 180px;
+    width: 100px;
     margin-top: 5px;
 }
 
@@ -424,7 +489,7 @@ li{
         font-family: Arial, Helvetica, sans-serif;
     }
     h1{
-        font-size: 50px;
+        font-size: 35px;
         font-weight: 600;
         color:	white;
         font-family: Helvetica;
@@ -449,16 +514,6 @@ li{
         font-size: 12px;
         font-family: Arial, Helvetica, sans-serif;
     }
-    h1{
-        font-size: 40px;
-        color:	white;
-        font-family: Helvetica;
-        font-weight: 400;
-        letter-spacing: 2px;
-        padding-top: 150px;
-        margin-left: auto;
-        text-align: center;
-    }
     .enterMovie{
         padding-top: 70px;
         text-align: center;
@@ -477,7 +532,7 @@ li{
         margin-top: 20px;
     }
     h1{
-        font-size: 40px;
+        font-size: 35px;
         color:	white;
         font-family: Helvetica;
         font-weight: 400;
@@ -498,7 +553,6 @@ li{
     }
 
     #chart{
-        margin-left: auto;
     }
 }
 @media (max-width: 900px) {
@@ -549,11 +603,6 @@ li{
         display: none;
         width: 0px;
     }
-    .darkbox{
-        width: 101.5%;
-        height: auto;
-        background-color: rgba(0, 0, 51, .7);
-    }
     .movedarkbox{
         height: 0px;
     }
@@ -597,6 +646,29 @@ li{
         width: 100%;
         background-color: #330000;
         position: absolute;
+    }
+    .ratingtitle{
+        margin-top: 35px; 
+        margin-bottom: -20px; 
+        margin-left: -70%;
+    }
+    .reviewbutton{
+        background-color: rgba(0, 0, 51, 1);
+        width: 140px;
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid white;
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+    .writereview{
+        width: 140px;
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: -120px;
+        margin-left: 150px;
     }
 }
 @media (max-width: 1100px){
