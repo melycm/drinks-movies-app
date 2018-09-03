@@ -30,10 +30,11 @@
                 <h2 class='movietitle'><%= name %></h2>
                 <h5 style="margin-top: 20px;">Overview</h5>
                 <p style="margin-top: 15px;"><%= description %></p>
-                <h5 style="margin-top: 35px; margin-bottom: -20px; margin-left: 12px;">Rating</h5>
+                <h5 class="ratingtitle">Rating</h5>
                 <div id="chart">
                     <canvas id="votes" height="75" width=auto><%= voteavg %></canvas>
                 </div>
+                <h5 class="writereview">Write a Review</h5>
                 <div class="reviewbutton">
                     <p><i class="fas fa-film"></i><a href="http://localhost:7000/form">Write a Review</a></p>
                 </div>

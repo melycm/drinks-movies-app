@@ -8,28 +8,21 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<<<<<<< HEAD
     
+=======
+    <link rel="stylesheet" href="style.css" type="text/css">
+>>>>>>> fdcd8c5927614555763395b0f702c5980c515659
     <style>
-        #login-box{
-            background: whitesmoke;
-            width: 400px;
-            height: 600px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin-top: -300px;
-            margin-left: -200px;
-            
-        }
         form{
-            padding: 20px;
+            padding: 0px 20px 20px 20px;
         }
-    
     </style>
   </head>
   <body id="<%= pageID %>">
+    <% include ../partials/header.ejs %>
+    <div class="signup">
     <div id="login-box">
-        
         <form action="/register" method="POST">
             <h1><%= title %></h1>
             <div class="form-group">
@@ -56,10 +49,12 @@
                 <label for="password">Password</label>
                 <input type="text" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
             </div>
-            <input type="submit" />
+            <input class="registerbtn" type="submit" />
             <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
         </form>
-    </div>  
+    </div> 
+    </div>
+    <% include ../partials/footer.ejs %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
