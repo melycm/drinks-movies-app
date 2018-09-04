@@ -368,23 +368,21 @@ li{
 }
 
 .name{
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     color: white;
     font-family: 'Roboto', sans-serif;
-    border: 2px solid white;
     width: 300px;
     text-align: center;
     vertical-align: middle;
-    padding: 10px 0 10px 0;
 }
 
 .mymovies{
     width: 100%;
     height: auto;
-    padding-top: 50px;
+    padding-top: 150px;
 }
 
 .mymovies h4{

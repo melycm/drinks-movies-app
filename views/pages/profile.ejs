@@ -13,14 +13,10 @@
   <body>
     <% include ../partials/header %>      
     <div class="accountpage">
-        <div class="name">
-            <h2>Hi!</h2>
-            <a href="/login" style="text-align: center; border: solid 1px black; background: blue; padding: 5px;">Logout</a>
-        </div>
         <div class="mymovies">
             <h4>My Favorited Movies</h4>
             <div class="clear">
-            <a id="clearit" style="text-align: center; border: solid 1px black; background: blue; padding: 5px;">Clear Favorites</a>
+            <a id="clearit" style="color: black;text-align: center; border: solid 1px black; background: rgb(235, 235, 51); padding: 5px;">Clear Favorites</a>
             </div>
             <div class="cardcontainer row">
                 <div class="card cardbackground text-white size col-md-4 col-12">
@@ -43,6 +39,9 @@
                 </div>
             </div>
         </div>
+        <div class="name">
+                <a href="/login" style="color: black; text-align: center; border: solid 1px black; background: rgb(235, 235, 51); padding: 5px;">Logout</a>
+            </div>
     </div>
     <% include ../partials/footer.ejs %>
     <!-- Optional JavaScript -->
