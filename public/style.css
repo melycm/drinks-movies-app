@@ -368,21 +368,13 @@ li{
 }
 
 .name{
-<<<<<<< HEAD
     margin-top: 100px;
     margin-left: auto;
-=======
-    margin-top: 150px;
-    margin-left: -50px;;
->>>>>>> 8523b2a4cb5d70d748abc6f2c6efe6bf2c039ac6
     margin-right: auto;
     position: relative;
     color: white;
     font-family: 'Roboto', sans-serif;
-<<<<<<< HEAD
-=======
     /* border: 2px solid white; */
->>>>>>> 8523b2a4cb5d70d748abc6f2c6efe6bf2c039ac6
     width: 300px;
     text-align: right;
     vertical-align: middle;
@@ -391,11 +383,7 @@ li{
 .mymovies{
     width: 100%;
     height: auto;
-<<<<<<< HEAD
-    padding-top: 150px;
-=======
     padding-top: 100px;
->>>>>>> 8523b2a4cb5d70d748abc6f2c6efe6bf2c039ac6
 }
 
 .mymovies h4{
