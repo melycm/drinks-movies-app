@@ -26,7 +26,7 @@ router.post('/submit', (req, res) => {
 
     
 
-    db.review.create({username: req.body.name, rating: req.body.rating, comments: req.body.comments})
+    db.review.create({username: req.body.username, comments: req.body.comments})
     .then(() => {
         console.log("Created an entry in my review table.")
     })
@@ -34,7 +34,7 @@ router.post('/submit', (req, res) => {
         console.log("Movie entry did not enter table.")
     })
 
-    db.movie.create({name: req.body.name})
+    db.movie.create({name: req.body.movie_title, rating: req.body.movie_rating})
     .then(() => {
         console.log("Created an entry in my movie table.")
     })

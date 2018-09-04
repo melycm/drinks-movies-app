@@ -7,9 +7,15 @@
         </div>
     </div>
     <div class="navlinks">
-        <a href="/">Home</a>
-        <a id="browse">Browse</a>
-        <a href="/profile">Profile</a>
-        <a href="/login">Log In</a>
+        <a class="navA" href="/">Home</a>
+        <a class="navA" id="browse">Browse</a>
+        <a class="navA" href="/profile">Profile</a>
+        <!-- <a class="navA" href="/login">Log In</a> -->
+        <a style="margin-top: -9px; margin-left: -20px;" class="nav-link dropdown-toggle navA" href="#" id="navbarDropdown" data-toggle="dropdown">My Account</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a style="border-radius: 5px; color: black; text-align: center;" class="dropdown-item" href="/login">Login</a>
+            <hr>
+            <a style="border-radius: 5px; color: black; text-align: center;" class="dropdown-item" href="/login">Logout</a>
+        </div>
     </div>
 </header>

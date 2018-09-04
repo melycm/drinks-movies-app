@@ -21,7 +21,7 @@ h1 {
    color: #f8ce0b;
 }
 
-footer {
-    position: relative;
+.footer {
+    position: absolute;
     bottom: 0px;
 }
