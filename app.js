@@ -99,7 +99,6 @@ app.post('/searchResult', function(req, res){
     var movie = req.body.searchResult;
     newMovie = movie.replace(/\s+/g, '+');
     let url = 'https://api.themoviedb.org/3/search/movie?api_key=3868e49837f9f140ac33ea1d02e23897&query=' + newMovie
-    // let url2 = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + newMovie
     
     function render(movie){
         var name = movie.title
