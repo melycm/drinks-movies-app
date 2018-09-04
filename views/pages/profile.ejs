@@ -14,11 +14,14 @@
     <% include ../partials/header %>      
     <div class="accountpage">
         <div class="name">
-            <h2>Hello, Keith</h2>
+            <h2>Hi!</h2>
             <a href="/login" style="text-align: center; border: solid 1px black; background: blue; padding: 5px;">Logout</a>
         </div>
         <div class="mymovies">
             <h4>My Favorited Movies</h4>
+            <div class="clear">
+            <a id="clearit" style="text-align: center; border: solid 1px black; background: blue; padding: 5px;">Clear Favorites</a>
+            </div>
             <div class="cardcontainer row">
                 <div class="card cardbackground text-white size col-md-4 col-12">
                     <img class="card-img" alt="Card image" id="movieposter1">
@@ -40,7 +43,6 @@
                 </div>
             </div>
         </div>
-        <a href="/login" style="text-align: center; border: solid 1px black; background: blue; padding: 5px;">Logout</a>
     </div>
     <% include ../partials/footer.ejs %>
     <!-- Optional JavaScript -->
@@ -48,7 +50,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-    <script> 
+    <script>
+
             var movieposter1 = document.getElementById("movieposter1");
             var title1 = document.getElementById("title1")
             var localposter1 = localStorage.getItem("poster1");
@@ -69,6 +72,12 @@
             var localtitle3 = localStorage.getItem("movie3");
             movieposter3.setAttribute('src', localposter3);
             title3.innerHTML = localtitle3;
+
+            var clear = document.getElementById("clearit");
+            clear.onclick = function() {
+                localStorage.clear();
+                location.reload();
+            }
     </script>
   </body>
 </html>
