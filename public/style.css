@@ -369,14 +369,14 @@ li{
 
 .name{
     margin-top: 150px;
-    margin-left: auto;
+    margin-left: -50px;;
     margin-right: auto;
     position: relative;
     color: white;
     font-family: 'Roboto', sans-serif;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     width: 300px;
-    text-align: center;
+    text-align: right;
     vertical-align: middle;
     padding: 10px 0 10px 0;
 }
@@ -384,11 +384,11 @@ li{
 .mymovies{
     width: 100%;
     height: auto;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .mymovies h4{
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .reply, .goHome {
