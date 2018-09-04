@@ -174,7 +174,7 @@ h4{
     font-weight: 500px;
 }
 
-a{
+.navA{
     color: white;
     text-decoration: none;
     vertical-align: middle;
@@ -426,8 +426,8 @@ li{
     background-color: rgba(0, 0, 51, 1);
     width: 186px;
     height: 40px;
-    /* text-align: center;
-    vertical-align: middle; */
+    text-align: center;
+    vertical-align: middle;
     border: 1px solid white;
     margin-left: 300px;
     margin-top: 270px;
@@ -736,7 +736,7 @@ li{
         vertical-align: middle;
         border: 1px solid white;
         margin-left: 100px;
-        margin-top: 400px;
+        margin-top: 380px;
         position: absolute;
         border-radius: 5px;
     }
@@ -749,7 +749,7 @@ li{
         vertical-align: middle; */
         border: 1px solid white;
         margin-left: 100px;
-        margin-top: 350px;
+        margin-top: 430px;
         position: absolute;
         margin-bottom: 20px;
         padding: 5px;
@@ -818,6 +818,7 @@ li{
         justify-content: flex-end; 
         margin-top: 10px;
         margin-left: 5px;
+        font-size: 10px;
     }
 }
 }
