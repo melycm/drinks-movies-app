@@ -60,10 +60,10 @@ To see the full code, please visit <a href="">Drinks-Movies-App</a> on Github.
 <img src="./public/images/movie_result.png">
 
 <h2>Video</h2>
-<img src="./public/images/">
+<a href="https://www.youtube.com/watch?v=xs2RRjuVijg">Demo of the website</a>
 
 <h2>Authors</h2>
-<li>Cantu, Melanie</li>
+<li>Cantu, Melissa</li>
 <li>Duong, Jeff</li>
 <li>Hunt, Skylar</li>
 <li>Pittman, Keith</li>
