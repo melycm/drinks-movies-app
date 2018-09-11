@@ -1,5 +1,5 @@
 <h1>Moviology</h1>
-Visit our webpage at www.moviology
+Visit our webpage at www.moviology.xyz
 
 
 <h2>Introduction</h2>
