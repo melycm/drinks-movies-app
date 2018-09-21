@@ -134,8 +134,13 @@ app.post('/searchResult', function(req, res){
     // res.redirect('/movieinfo')
 })
 
-http.listen(7000, function () {
-    console.log('Listening on port 7000');
+const PORT = process.env.PORT || 3000;
+http.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
+
+// http.listen(7000, function () {
+//     console.log('Listening on port 7000');
+// });
 
 // module.exports = db;
